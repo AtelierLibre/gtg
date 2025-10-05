@@ -4,25 +4,13 @@ build-backend = "hatchling.build"
 
 [project]
 name = "gtg"
-dynamic = ["version"]            # take version from git tags (via hatch-vcs)
+version = 0.1.0
 description = "Shared utilities for my DS projects"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
   "numpy", "pandas", "geopandas", "shapely",  # whatever you actually use
 ]
-
-# Optional: extras for heavier stacks you don't always want
-[project.optional-dependencies]
-geo = ["geopandas", "shapely", "pyproj"]
-
-# Optional: CLI entry points
-[project.scripts]
-urbtools-cli = "urbtools.cli:main"
-
-# VCS-driven versioning (git tags like v0.1.0 -> 0.1.0)
-[tool.hatch.version]
-source = "vcs"
 
 # Tell hatchling where your packages live (src/ layout)
 [tool.hatch.build.targets.wheel]
