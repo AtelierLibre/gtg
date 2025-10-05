@@ -1,1 +1,3 @@
 # geometry
+
+print("hello world")
